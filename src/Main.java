@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
-    }
         System.out.println(shouldWakeUp (true, 1));
         System.out.println(shouldWakeUp (false, 2));
         System.out.println(shouldWakeUp (true, 8));
@@ -18,6 +17,12 @@ public class Main {
         System.out.println("--------");
         System.out.println(area(5.0, 4.0));
         System.out.println(area(-1.0, 4.0));
+        System.out.println("--------");
+        System.out.println(area(5.0));
+        System.out.println(area(-1));
+
+    }
+
     public static boolean shouldWakeUp(Boolean isBarking , int time ) {
         if (time < 0 || time > 23) {
             return false;
@@ -37,6 +42,7 @@ public class Main {
             return true;
     } else return !isSummer && temperature >= 25 && temperature <= 35;
     }
+
     public static double area(double a, double b){
         if (a <0 || b<0){
             return -1;
@@ -46,4 +52,13 @@ public class Main {
         }
 
     }
+
+    public static double area(double radius){
+        if (radius <0){
+            return -1;
+        } else{
+            return radius*radius*Math.PI;
+        }
+    }
+
 }
